@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_05_06_194316) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.integer "money"
+    t.float "money", default: 5000.0
     t.float "net_gain", default: 0.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
