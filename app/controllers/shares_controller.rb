@@ -1,7 +1,7 @@
 class SharesController < ApplicationController
 
   def index
-    @ushares = Shares.all
+    @shares = Share.all
     render json: @shares, status: :ok
   end
 
