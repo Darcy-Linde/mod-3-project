@@ -4,6 +4,7 @@ class Transactions < ActiveRecord::Migration[5.2]
       t.integer :user_id
       t.boolean :bought
       t.string :stock_symbol
+      t.float :stock_price
       t.integer :quantity
       t.float :transaction_total
 

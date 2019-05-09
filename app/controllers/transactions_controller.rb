@@ -11,7 +11,7 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    @transaction = Transaction.new(shares_params)
+    @transaction = Transaction.new(transactions_params)
     if @transaction.save
       render json: @transaction, status: :created
     else
@@ -31,7 +31,7 @@ class TransactionsController < ApplicationController
   private
 
   def transactions_params
-    params.permit(:user_id, :bought, :stock_symbol, :quantity, :transaction_total)
+    params.permit(:user_id, :bought, :stock_symbol, :stock_price, :quantity, :transaction_total)
   end
 
 end
